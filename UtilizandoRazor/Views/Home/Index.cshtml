@@ -3,5 +3,30 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Declaração do uso de variáveis</h2>
+
+@{ var site = "www.devmedia.com.br";}
+
+<fieldset>
+    <legend> Bloco de Declaração único </legend>
+    <p>Empresa: @site</p>
+</fieldset>
+
+@{ 
+    int id = 1;
+    string nome = "joão paulo";
+    double valor = 12.75;
+    string sobreNome;
+    sobreNome = "da Silva";
+}
+
+<fieldset>
+    <legend>Bloco de declaração multiplo</legend>
+    <p>Identificador: @id</p>
+    <p>Nome: @nome</p>
+    <p>Sobrenome: @sobreNome</p>
+    <p>Valor: @valor</p>
+
+    @*Final do código*@
+</fieldset>
 

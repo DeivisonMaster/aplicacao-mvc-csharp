@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Condições e Laços de repetição</h2>
+
+@{
+    var texto = "";
+    var data = DateTime.Now.Day;
+
+    if (data < 31)
+    {
+        texto = "Hoje ainda não é dia 31 de Janeiro = " + " " + data;
+    }
+    else
+    {
+        texto = "Hoje é dia 31";
+    }
+
+    string mensagem = null;
+    for (int i = 0; i < 3; i++)
+    {
+        mensagem = "Hello World";
+        @mensagem @i <br />
+    }
+
+    <p>Data atual: @DateTime.Now.ToLongDateString(); </p>
+    <p>Hora atual: @DateTime.Now.ToLongTimeString(); </p>
+}
+
+Texto dentro do bloco Razor: @texto
+
