@@ -106,12 +106,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CondicoesController.cs" />
     <Compile Include="Controllers\EntradaDadosController.cs" />
+    <Compile Include="Controllers\EnumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HtmlHelperController.cs" />
     <Compile Include="Controllers\ViewDataBagController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Conta.cs" />
+    <Compile Include="Models\DiasDaSemana.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +131,10 @@
     <Content Include="Views\ViewDataBag\Index.cshtml" />
     <Content Include="Views\ViewDataBag\exemplo2.cshtml" />
     <Content Include="Views\ViewDataBag\exemplo3.cshtml" />
+    <Content Include="Views\HtmlHelper\Index.cshtml" />
+    <Content Include="Views\HtmlHelper\Lista.cshtml" />
+    <Content Include="Views\HtmlHelper\Lista2.cshtml" />
+    <Content Include="Views\Enum\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

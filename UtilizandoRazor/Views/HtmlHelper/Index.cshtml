@@ -1,0 +1,94 @@
+﻿@model UtilizandoRazor.Models.Conta
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Html Helper</h2>
+
+<h2>HTML ActionLink</h2>
+@Html.ActionLink("link com HTML Helpers", "exemplo3", "ViewDataBag")
+
+
+<h2>HTML Forms</h2>
+@{ Html.BeginForm();}
+
+<!-- ITENS DO FORMULARIO -->
+
+@{ Html.EndForm();}
+
+@using (Html.BeginForm())
+{
+    <!-- ITENS DO FORMULARIO -->
+}
+
+<!-- informando parametros de requisição manualmente -->
+@using (Html.BeginForm("exemplo2", "ViewDataBag"))
+{
+    <!-- ITENS DO FORMULARIO -->
+}
+
+<!-- HTML Checkbox -->
+@Html.CheckBox("Ativo", "false")
+@Html.CheckBox("Ativo", "false")
+
+<!-- HTML TextBox -->
+@Html.TextBox("Nome", "Digite o nome do cliente")
+
+<!-- HTML TextArea -->
+@Html.TextArea("observação", "Informações complementares")
+
+<!-- HTML RadioButton -->
+@Html.RadioButton("Estado", "Paraná", "false")
+@Html.RadioButton("Estado", "Rio Grande do Sul", "true")
+@Html.RadioButton("Estado", "Santa Catarina", "false")
+
+<!-- HTML Hidden -->
+@Html.Hidden("Identificador", 1)
+
+<!-- HTML Password -->
+@Html.Password("Password")
+
+<h2>Componente checkbox tipado</h2>
+<!-- variavel conta recebe uma referencia da classe Conta -->
+@Html.CheckBoxFor(conta => conta.indicaAtivo)
+
+@Html.TextAreaFor(conta => conta.observacao)
+
+@Html.RadioButtonFor(conta => conta.tipoDeConta, "Conta Corrente")
+@Html.RadioButtonFor(conta => conta.tipoDeConta, "Conta Poupança")
+@Html.RadioButtonFor(conta => conta.tipoDeConta, "Conta Salário")
+
+<br />
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Conta</legend>
+
+        @Html.LabelFor(model => model.nomeCliente)
+        @Html.TextBoxFor(model => model.nomeCliente)
+        <br />
+
+        @Html.LabelFor(model => model.nomeCliente)
+        @Html.EditorFor(model => model.nomeCliente)
+    </fieldset>
+}
+
+<br/>
+
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Conta</legend>
+        @Html.EditorForModel()
+    </fieldset>
+}
+
+
+<br />
+
+
+
