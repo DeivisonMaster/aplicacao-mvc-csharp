@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Entrada de dados</h2>
+
+@{ 
+    var valorTotal = "";
+
+    if (IsPost)
+    {
+        var valor1 = Request["texto1"];
+        var valor2 = Request["texto2"];
+
+        var total = valor1.AsInt() + valor2.AsInt();
+
+        valorTotal = "Total " + total;
+    }
+}
+
+<form action="" method="post">
+    <fieldset>
+        <legend>Informe os valores 1 e 2</legend>
+        <p>
+            <label for="texto1">Primeiro valor</label>
+            <input type="number" name="texto1" />
+        </p>
+
+        <p>
+            <label for="texto2">Segundo valor</label>
+            <input type="number" name="texto2" />
+        </p>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="adicionar"/>
+    </p>
+</form>
+
+<p>@valorTotal</p>
+

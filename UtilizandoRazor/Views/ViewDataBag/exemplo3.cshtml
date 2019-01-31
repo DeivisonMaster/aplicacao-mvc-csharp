@@ -1,0 +1,20 @@
+﻿@model UtilizandoRazor.Models.Conta
+
+@{
+    ViewBag.Title = "exemplo3";
+}
+
+<h2>Forma Correta de Transportar Objetos com Razor (Strongly Typed Views)</h2>
+
+<fieldset>
+    <legend>Dados via Strongly Typed Views</legend>
+
+    <p>Identificador da conta: @Model.idConta</p>
+    <p>Numero da conta: @Model.numeroConta</p>
+    <p>Nome do cliente: @Model.nomeCliente</p>
+    <p>Saldo atual: @Model.saldoAtual</p>
+    <p>Valor do limite do cheque especial: @Model.limiteChequeEspecial</p>
+    <p>Data de entrada do cliente no banco: @Model.dataEntrada</p>
+</fieldset>
+
+

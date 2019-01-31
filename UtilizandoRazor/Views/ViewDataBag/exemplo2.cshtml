@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "exemplo2";
+}
+
+<h2>Forma Incorreta de transportar objetos com Razor: ViewData e ViewBag</h2>
+
+@{
+
+    var variavelViewData = ViewData["conta"] as UtilizandoRazor.Models.Conta;
+    var variavelViewBag = ViewBag.conta;
+
+    <fieldset>
+        <legend>Dados via ViewData</legend>
+
+        <p>Identificador da conta: @variavelViewData.idConta</p>
+        <p>Numero da conta: @variavelViewData.numeroConta</p>
+        <p>Nome do cliente: @variavelViewData.nomeCliente</p>
+        <p>Saldo atual: @variavelViewData.saldoAtual</p>
+        <p>Valor do limite do cheque especial: @variavelViewData.limiteChequeEspecial</p>
+        <p>Data de entrada do cliente no banco: @variavelViewData.dataEntrada</p>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Dados via ViewBag</legend>
+
+        <p>Identificador da conta: @variavelViewBag.idConta</p>
+        <p>Numero da conta: @variavelViewBag.numeroConta</p>
+        <p>Nome do cliente: @variavelViewBag.nomeCliente</p>
+        <p>Saldo atual: @variavelViewBag.saldoAtual</p>
+        <p>Valor do limite do cheque especial: @variavelViewBag.limiteChequeEspecial</p>
+        <p>Data de entrada do cliente no banco: @variavelViewBag.dataEntrada</p>
+    </fieldset>
+}
+
